@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pendaftaran Sidang Proposal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Pendaftaran Sidang Proposal</h1>
+      <h2>Tenik Informatika Institut Teknologi Sumatera</h2>
+    </header>
+    <main>
+      <section class="formulir" id="formulir">
+        <form action="detail.html" method="post" id="form_ta">
+          <label
+            >Nama Kamu
+            <input
+              type="text"
+              name="nama"
+              placeholder="Nama lengkap"
+              required
+            />
+          </label>
+          <br />
+
+          <label
+            >Email
+            <input
+              type="email"
+              name="email"
+              placeholder="email itera"
+              required
+            />
+          </label>
+          <br />
+
+          <label
+            >NIM
+            <input type="text" name="nim" placeholder="NIM" required />
+          </label>
+          <br />
+
+          <label
+            >Dosen Pembimbing 1:
+            <select name="dosen_pembimbing_1">
+              <option>Martin C.T. Manullang, S.T., M.T.</option>
+              <option>Meida Cahyo Untoro, S.Kom., M.Kom.</option>
+              <option>Muhammad Habib Algifari, S.Kom., M.T.I.</option>
+              <option>Miranti Verdiana, M.Si.</option>
+              <option>Eko Dwi Nugroho, S.Kom., M.Cs.</option>
+              <option>Muhammad Habib Alghifari</option>
+            </select>
+          </label>
+          <br />
+
+          <label
+            >Dosen Pembimbing 2:
+            <select name="dosen_pembimbing_2">
+              <option>Martin C.T. Manullang, S.T., M.T.</option>
+              <option>Meida Cahyo Untoro, S.Kom., M.Kom.</option>
+              <option>Muhammad Habib Algifari, S.Kom., M.T.I.</option>
+              <option>Miranti Verdiana, M.Si.</option>
+              <option>Eko Dwi Nugroho, S.Kom., M.Cs.</option>
+              <option>Muhammad Habib Alghifari</option>
+            </select>
+          </label>
+          <br />
+
+          <label
+            >Kelompok Keahlian:
+            <select name="kelompok_keahlian">
+              <option value="rplsi">
+                Rekayasa Perangkat Lunak dan Sistem Informasi
+              </option>
+              <option value="aide">
+                Artificial Intelligence dan Data Engineering
+              </option>
+              <option value="ksmi">Keamanan Siber Multimedia dan IOT</option>
+            </select>
+          </label>
+          <br />
+
+          <label
+            >Link Drive Proposal TA:
+            <input
+              type="url"
+              name="link_drive"
+              placeholder="https://drive.google.com/..."
+            />
+          </label>
+          <br />
+
+          <input type="submit" id="submit" value="Daftar" />
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
+
+<script>
+  let form = document.getElementsByTagName("form")[0];
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    alert("Terima kasih Sudah Mendaftar!");
+    form.reset();
+  });
+</script>
